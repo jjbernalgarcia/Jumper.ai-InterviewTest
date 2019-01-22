@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Jumper.ai-integrations</title>
+    <link rel="icon" type="image/png" href="images/favicon.png" />
+    <link href="https://fonts.googleapis.com/css?family=Fjalla+One|Source+Sans+Pro" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="icon" href="images/favicon.jpg">
+    <!-- <link rel="stylesheet" href="css/responsive.css"> -->
+    <!-- <style>
+      @media screen and (max-width: 768px) {
+        body {
+          border: 10px solid blue;
+        }
+      }
+    </style> -->
+    <meta name="viewport" content="width=device-width, initial-scale=1"> 
+  </head>
+  <body>
+    <header class="header">
+      <div class="container">
+        <figure class="logo-img">
+          <img src="images/logo.svg" width="192" height="45" alt="" />
+        </figure>
+        <i class="icon-menu burger-button" id="burger-menu"></i>
+        <nav class="menu">
+          <ol>
+            <li>
+              <a class="link" href="#portafolio">Solutions</a>
+            </li>
+            <li>
+              <a class="link" href="#eventos">Integrations</a>
+            </li>
+            <li>
+              <a class="link" href="#contacto">Learn</a>
+            </li>
+            <li>
+              <a class="link" href="#login">Login</a>
+            </li>
+            <li>
+              <a class="link-get-started" href="#getStarted">Get started</a>
+            </li>
+          </ol>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero">
+        <h1>Print, ship, and sell <br> your designs for FREE!</h1>
+        <h2>Market  products NOW with no investment using the PRINTFUL and JUMPER integration</h2>     
+        <a href="https://jumper.ai/s/login" target="_blank"><img class="hero-image" src="images/buttonCTA.png" alt=""></a>
+      </section>
+  
+      <section id="perks" class="perks container">
+        <div class="perks-container">
+          <img class="perks-image" src="images/logo+logo.png" alt="">
+          <article class="perk">
+            <div class="perk-details">
+              <h3 class="perk-title">Printful take cares of printing, packaging, and shipping</h3>
+              <!-- <h6 class="perk-course">While you focus on creating designs 😎</h6> -->
+              <p class="perk-description">
+                The USA shipping coverage is within 3 days on average, you only pay when you sell, and no minimum orders are required.*  </p>
+              <p class="perk-note">
+                *These Affirmations are based on the Printful inc. value proposition. Terms and conditions may apply.
+              </p>
+            </div>
+            <div class="perk-details">
+              <figure class="stretchy-wrapper">
+                <iframe class="perk-image" src="https://www.youtube.com/embed/F-2677QEXKQ" 
+                frameborder="0" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" allowfullscreen> </iframe>
+              </figure>
+            </div>
+          </article>
+
+          <article class="perk">
+              <div class="perk-details">
+                <h3 class="perk-title">Get selling in social on minutes </h3>
+                
+                <p class="perk-description">Join at Jumper and Printful, link the accounts, and start selling! Follow this 4 minutes video to get started. Is free!</p> 
+                  <p class="perk-description"  >Create your accounts: </p>
+                  <p class="perk-description"  > <a href="https://www.printful.com/auth/register?ref=b2b" target="_blank">Printful</a></p>
+                  <p class="perk-description"  >  <a href="https://jumper.ai/s/login" target="_blank">Jumper.ai</a></p>
+                </div>  
+                <div class="perk-details">
+                  <figure class="stretchy-wrapper">
+                    <iframe class="perk-image" src="https://www.youtube.com/embed/idBV9Cv9I0U" 
+                    frameborder="0" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                  </figure>
+                </div>
+          </article>
+  
+          <img class="CTA-image" src="images/button2CTA.png" alt="">
+          <img class="footer-image" src="images/footer.png" alt="">
+        </div>
+      </section>
+    </main>
+
+    
+      
+      
+  
+    <script> 
+      // console.log('Hola mundo! es mi primera linea en JS');
+      const ipad = window.matchMedia('screen and (max-width: 1023px)')
+      const menu = document.querySelector('.menu');
+      // console.log(menu);
+      const burgerButton = document.querySelector('#burger-menu');
+      // console.log(burgerButton);
+
+
+      ipad.addListener(validation)
+
+      function validation(event) {
+        if (event.matches) {
+          burgerButton.addEventListener('click', hideShow)
+        } else {
+          burgerButton.removeEventListener('click', hideShow)
+        }
+      }
+      validation(ipad);
+
+
+      function hideShow() {
+        if (menu.classList.contains('is-active')) {
+          menu.classList.remove('is-active');
+        } else {
+          menu.classList.add('is-active');
+        }
+      }
+    </script>
+  </body>
+</html>
